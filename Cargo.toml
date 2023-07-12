@@ -1,0 +1,25 @@
+[package]
+name = "term-nim"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "term_nim"
+path = "src/lib.rs"
+
+[[bin]]
+name = "term-nim"
+path = "src/main.rs"
+
+[dependencies]
+axum = "0.6.18"
+crossterm = "0.26.1"
+local-ip-address = "0.5.3"
+rand = "0.8.5"
+reqwest = { version = "0.11.18", features = ["json"] }
+serde = { version = "1.0.164", features = ["derive"] }
+serde_json = "1.0.99"
+tokio = { version = "1.29.1", features = ["full"] }
+tracing-subscriber = "0.3.17"
+tui = "0.19.0"
